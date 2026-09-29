@@ -17,10 +17,20 @@ const SPIDERS = [
 export default function AtmosphericBackground() {
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      {/* Mansión embrujada con luna roja */}
+      {/* Mansión embrujada con luna roja.
+          La fuente es vertical (561×1000): en pantallas anchas la escena
+          nítida se centra a su relación de aspecto (solo ~1.2× de escala)
+          y los lados se rellenan con una copia muy difuminada y oscurecida
+          de sí misma — antes se estiraba 3.4× y se veía rota. */}
+      <img
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-center scale-110 blur-[22px] brightness-[0.55] saturate-125"
+        src={mansionUrl}
+      />
       <img
         alt="Mansión embrujada bajo un colosal eclipse lunar rojo con calabazas resplandecientes — Alternative Halloween Fest"
-        className="w-full h-full object-cover object-center scale-105 blur-[1.5px] lg:blur-[2.5px] filter brightness-90 contrast-125"
+        className="absolute left-1/2 top-1/2 h-full w-auto min-w-full max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center filter brightness-90 contrast-125"
         src={mansionUrl}
       />
 
