@@ -459,51 +459,51 @@ body {
 }
 
 .animate-bat-path-1 {
-  animation: flightPath1 27s linear infinite;
+  animation: flightPath1 27s linear infinite both;
 }
 
 .animate-bat-path-2 {
-  animation: flightPath2 22s 6s linear infinite;
+  animation: flightPath2 22s 6s linear infinite both;
 }
 
 .animate-bat-path-moon {
-  animation: flightPathMoonOrbit 19s 2s linear infinite;
+  animation: flightPathMoonOrbit 19s 2s linear infinite both;
 }
 
 .animate-bat-path-moon-1 {
-  animation: flightPathMoonSwarm1 20s 4s linear infinite;
+  animation: flightPathMoonSwarm1 20s 4s linear infinite both;
 }
 
 .animate-bat-path-moon-2 {
-  animation: flightPathMoonSwarm2 23s 9s linear infinite;
+  animation: flightPathMoonSwarm2 23s 9s linear infinite both;
 }
 
 .animate-bat-path-swoop {
-  animation: flightPathLowSwoop 31s 11s linear infinite;
+  animation: flightPathLowSwoop 31s 11s linear infinite both;
 }
 
 .animate-bat-path-giant {
-  animation: flightPathForegroundGiant 29s 16s linear infinite;
+  animation: flightPathForegroundGiant 29s 16s linear infinite both;
 }
 
 .animate-bat-path-tower-up {
-  animation: flightPathTowerAscent 24s 3s linear infinite;
+  animation: flightPathTowerAscent 24s 3s linear infinite both;
 }
 
 .animate-bat-path-tower-left {
-  animation: flightPathTowerLeftSpire 26s 10s linear infinite;
+  animation: flightPathTowerLeftSpire 26s 10s linear infinite both;
 }
 
 .animate-bat-path-right-flank {
-  animation: flightPathRightFlank 23s 13s linear infinite;
+  animation: flightPathRightFlank 23s 13s linear infinite both;
 }
 
 .animate-bat-path-left-flank {
-  animation: flightPathLeftFlankHigh 30s 7s linear infinite;
+  animation: flightPathLeftFlankHigh 30s 7s linear infinite both;
 }
 
 .animate-bat-path-spire-swarm {
-  animation: flightPathDistantSpireSwarm 21s 1.5s linear infinite;
+  animation: flightPathDistantSpireSwarm 21s 1.5s linear infinite both;
 }
 
 .lightning-flash {
@@ -748,6 +748,11 @@ body {
   .animate-bat-path-left-flank,
   .animate-bat-path-spire-swarm {
     animation: none !important;
+  }
+
+  /* Sin animaciones, la capa de murciélagos se oculta (se quedarían apilados) */
+  .bat-swarm-layer {
+    display: none;
   }
 
   .star {

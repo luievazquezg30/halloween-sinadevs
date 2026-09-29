@@ -43,7 +43,7 @@ export default function BatSwarm() {
           </linearGradient>
         </defs>
       </svg>
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
+      <div className="bat-swarm-layer absolute inset-0 overflow-hidden pointer-events-none z-[1]">
         {BAT_CONFIGS.map((config) => (
           <Bat key={config.id} config={config} />
         ))}

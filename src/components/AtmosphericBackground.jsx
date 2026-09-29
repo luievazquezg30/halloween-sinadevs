@@ -1,8 +1,11 @@
 import BatSwarm from './BatSwarm.jsx'
 import EmbersCanvas from './EmbersCanvas.jsx'
+import mansionUrl from '../assets/mansion-eclipse.png'
 
-const MANSION_IMAGE =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuCxS09NRQUU_wO3e2wfpgFHkJab2NV49Xogs3b_ldogQ86naY3Os5hI_ejUgXzBg3BBJHkVdYNEXRTuZrDsli-GJ2UUhTrsYRnT4tyEqdnYcyzIxQH56ssupo-zMdRQcyye21XKjkz3ipKnYDcakAU0fcdHTsFBkb0jQXigZoNWH85bimyLKBnzVQwR2I4rYM01PyqGffV_ipm85Q0VPaKdECnoB25nfWXV7__wbwBcy3RyD7WBrRj_2KTuACiTX78vLQ'
+// La mansión vive como asset local: la URL de Google (aida-public) era
+// temporal y servía solo 287×512 — en escritorio se estiraba y se veía
+// rota. La fuente es 561×1000; en pantallas grandes un desenfoque leve
+// disimula el escalado (el fondo ya vive muy oscurecido tras las viñetas).
 
 // Arañas en esquinas libres del contenido, con ritmos desfasados
 const SPIDERS = [
@@ -17,8 +20,8 @@ export default function AtmosphericBackground() {
       {/* Mansión embrujada con luna roja */}
       <img
         alt="Mansión embrujada bajo un colosal eclipse lunar rojo con calabazas resplandecientes — Alternative Halloween Fest"
-        className="w-full h-full object-cover object-center scale-105 filter brightness-90 contrast-125"
-        src={MANSION_IMAGE}
+        className="w-full h-full object-cover object-center scale-105 blur-[1.5px] lg:blur-[2.5px] filter brightness-90 contrast-125"
+        src={mansionUrl}
       />
 
       {/* Viñetas y degradados góticos para legibilidad */}
