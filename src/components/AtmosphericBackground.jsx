@@ -18,18 +18,21 @@ export default function AtmosphericBackground() {
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
       {/* Mansión embrujada con luna roja.
-          La fuente es vertical (561×1000): en pantallas anchas la escena
-          se muestra grande centrada (135% de alto ≈ 1.45× de escala, se
-          recorta un poco de cielo y suelo pero sin estirar) y los lados
-          quedan en oscuridad con degradado. Los bordes se funden con
-          .escena-fundida. En móvil sigue completa (h-full), como estaba. */}
-      <div
+          Escritorio (lg+): cubre todo lo alto y lo ancho con desenfoque
+          cinematográfico — la fuente es 561×1000 y estirarla sin blur se
+          ve pixelada; el bokeh la convierte en atmósfera pura y el
+          degradado la integra al diseño.
+          Móvil: se muestra completa y nítida (la fuente es del mismo
+          aspecto que la pantalla). */}
+      <img
+        alt=""
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#1c070d_0%,#0a0206_55%,#000000_100%)]"
+        className="hidden lg:block absolute inset-0 h-full w-full object-cover object-center scale-110 blur-[10px] brightness-90 saturate-125"
+        src={mansionUrl}
       />
       <img
         alt="Mansión embrujada bajo un colosal eclipse lunar rojo con calabazas resplandecientes — Alternative Halloween Fest"
-        className="escena-fundida absolute left-1/2 top-1/2 h-full lg:h-[135%] w-auto min-w-full max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center brightness-100 contrast-110"
+        className="escena-fundida lg:hidden absolute left-1/2 top-1/2 h-full w-auto min-w-full max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center brightness-100 contrast-110"
         src={mansionUrl}
       />
 
