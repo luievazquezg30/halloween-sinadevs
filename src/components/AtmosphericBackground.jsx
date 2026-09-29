@@ -19,26 +19,28 @@ export default function AtmosphericBackground() {
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
       {/* Mansión embrujada con luna roja.
           La fuente es vertical (561×1000): en pantallas anchas la escena
-          nítida se centra a su relación de aspecto (~1.2× de escala, como
-          se ve en móvil) y los lados quedan en oscuridad con degradado —
-          a propósito. Los bordes de la escena se funden con .escena-fundida. */}
+          se muestra grande centrada (135% de alto ≈ 1.45× de escala, se
+          recorta un poco de cielo y suelo pero sin estirar) y los lados
+          quedan en oscuridad con degradado. Los bordes se funden con
+          .escena-fundida. En móvil sigue completa (h-full), como estaba. */}
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#1c070d_0%,#0a0206_55%,#000000_100%)]"
       />
       <img
         alt="Mansión embrujada bajo un colosal eclipse lunar rojo con calabazas resplandecientes — Alternative Halloween Fest"
-        className="escena-fundida absolute left-1/2 top-1/2 h-full w-auto min-w-full max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center filter brightness-95 contrast-110"
+        className="escena-fundida absolute left-1/2 top-1/2 h-full lg:h-[135%] w-auto min-w-full max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center brightness-100 contrast-110"
         src={mansionUrl}
       />
 
-      {/* Viñetas y degradados góticos para legibilidad */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/75" />
+      {/* Viñetas y degradados góticos para legibilidad (suaves: la escena
+          debe verse, no esconderse) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/65" />
       <div
-        className="absolute inset-0 mix-blend-multiply opacity-80"
+        className="absolute inset-0 mix-blend-multiply opacity-55"
         style={{ background: 'radial-gradient(circle at 50% 35%, transparent 20%, #000000 85%)' }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-transparent to-black/55" />
 
       {/* Niebla a la deriva */}
       <div
