@@ -768,3 +768,23 @@ body {
     opacity: 1 !important;
   }
 }
+
+/* La escena nítida del fondo se funde con su copia difuminada en los
+   bordes izquierdo/derecho: en pantallas anchas no se nota la costura
+   entre la parte en foco y el relleno oscuro (looks like mobile). */
+.escena-fundida {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 64px,
+    #000 calc(100% - 64px),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 64px,
+    #000 calc(100% - 64px),
+    transparent
+  );
+}

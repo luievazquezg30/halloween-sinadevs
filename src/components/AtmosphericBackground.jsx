@@ -19,18 +19,20 @@ export default function AtmosphericBackground() {
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
       {/* Mansión embrujada con luna roja.
           La fuente es vertical (561×1000): en pantallas anchas la escena
-          nítida se centra a su relación de aspecto (solo ~1.2× de escala)
-          y los lados se rellenan con una copia muy difuminada y oscurecida
-          de sí misma — antes se estiraba 3.4× y se veía rota. */}
+          nítida se centra a su relación de aspecto (~1.2× de escala, la
+          misma relación imagen/pantalla que en móvil) y los lados se
+          rellenan con una copia muy difuminada y oscurecida; los bordes
+          de la escena se funden con .escena-fundida para que no se note
+          la costura. */}
       <img
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover object-center scale-110 blur-[22px] brightness-[0.55] saturate-125"
+        className="absolute inset-0 h-full w-full object-cover object-center scale-125 blur-[26px] brightness-[0.45] saturate-150"
         src={mansionUrl}
       />
       <img
         alt="Mansión embrujada bajo un colosal eclipse lunar rojo con calabazas resplandecientes — Alternative Halloween Fest"
-        className="absolute left-1/2 top-1/2 h-full w-auto min-w-full max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center filter brightness-90 contrast-125"
+        className="escena-fundida absolute left-1/2 top-1/2 h-full w-auto min-w-full max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center filter brightness-95 contrast-110"
         src={mansionUrl}
       />
 
