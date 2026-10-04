@@ -17,7 +17,7 @@ const DETAILS = [
   {
     key: 'location',
     label: 'Ubicación',
-    value: 'Próximamente',
+    value: '',
     address: 'Cerro de la Campana 121, Lomas de Mazatlán',
     addressHref: 'https://maps.app.goo.gl/H6ZSthe2aFU6HrQe9',
     iconColor: 'text-blood-500',

@@ -24,27 +24,29 @@ export default function NavBar() {
           </span>
         </a>
 
-        {/* Estado de preventa (oculto en móvil: el hero ya lo comunica) */}
-        <span
-          aria-disabled="true"
-          title="Los boletos estarán disponibles muy pronto"
-          className="hidden sm:inline-flex relative flex-shrink-0 px-5 py-2.5 rounded-xl overflow-hidden font-semibold text-xs tracking-wider uppercase text-white cursor-default select-none"
+        {/* Preventa disponible: enlace al panel de boletos */}
+        <a
+          href="https://halloween.panel.sinadevs.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Ir a la preventa"
+          className="hidden sm:inline-flex relative flex-shrink-0 px-5 py-2.5 rounded-xl overflow-hidden font-semibold text-xs tracking-wider uppercase text-white transition-transform duration-300 hover:-translate-y-0.5"
         >
           <span className="absolute inset-0 bg-blood-600 opacity-80" />
           <span className="absolute inset-0 bg-gradient-to-r from-blood-600 via-blood-500 to-red-700" />
-          <span className="absolute inset-0 border border-red-300/40 rounded-xl" />
+          <span className="absolute inset-0 border border-red-300/40 rounded-xl animate-pulse-blood" />
           <span className="relative flex items-center gap-2">
-            <span>Próximamente</span>
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <span>Preventa disponible</span>
+            <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
               />
             </svg>
           </span>
-        </span>
+        </a>
       </nav>
     </header>
   )
