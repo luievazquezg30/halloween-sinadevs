@@ -35,29 +35,32 @@ export default function Hero() {
         "Alcohol, degenere, sexo y premio al disfraz más perro”
       </p>
 
-      {/* Botones de estado (todo próximamente) */}
+      {/* Botones: preventa al panel, ubicación abre Google Maps */}
       <div className="reveal reveal-5 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 w-full max-w-md mb-[clamp(1rem,3.5vmin,2.5rem)]">
-        <span
-          aria-disabled="true"
-          title="Los boletos estarán disponibles muy pronto"
-          data-purpose="coming-soon-button"
-          className="w-full sm:w-auto flex-1 relative px-[clamp(1.25rem,4vmin,2rem)] py-[clamp(0.6rem,1.8vmin,1rem)] rounded-xl text-xs sm:text-sm font-bold uppercase tracking-[0.18em] sm:tracking-widest text-white cursor-default select-none"
+        <a
+          href="https://halloween.panel.sinadevs.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Ir a la preventa"
+          data-purpose="preventa-button"
+          className="w-full sm:w-auto flex-1 relative px-[clamp(1.25rem,4vmin,2rem)] py-[clamp(0.6rem,1.8vmin,1rem)] rounded-xl text-xs sm:text-sm font-bold uppercase tracking-[0.18em] sm:tracking-widest text-white transition-transform duration-300 hover:-translate-y-0.5"
         >
           <span className="absolute inset-0 bg-blood-600 rounded-xl blur-[10px] opacity-75 animate-pulse-blood" />
           <span className="absolute inset-0 bg-gradient-to-r from-blood-600 via-blood-500 to-red-700 rounded-xl border border-red-300/40 shadow-2xl" />
           <span className="relative flex items-center justify-center gap-1.5 sm:gap-2 whitespace-nowrap">
             <span>Preventa aquí</span>
-            <span className="text-red-200 text-[10px] sm:text-xs font-normal tracking-normal normal-case">(muy pronto)</span>
           </span>
-        </span>
+        </a>
 
-        <span
-          aria-disabled="true"
-          title="La ubicación se revelará pronto"
-          data-purpose="location-tba-button"
-          className="w-full sm:w-auto flex-1 glass-card px-[clamp(1.25rem,4vmin,2rem)] py-[clamp(0.6rem,1.8vmin,1rem)] rounded-xl text-sm font-bold uppercase tracking-widest text-gray-200 cursor-default select-none"
+        <a
+          href="https://maps.app.goo.gl/UB8anSdBtamej3FQ7"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Ver ubicación en Google Maps"
+          data-purpose="location-button"
+          className="w-full sm:w-auto flex-1 glass-card hover:border-red-500/60 hover:text-white transition-colors px-[clamp(1.25rem,4vmin,2rem)] py-[clamp(0.6rem,1.8vmin,1rem)] rounded-xl text-sm font-bold uppercase tracking-widest text-gray-200"
         >
-          <span className="flex items-center justify-center gap-2">
+          <span className="flex items-center justify-center gap-2 whitespace-nowrap">
             <svg className="w-4 h-4 text-blood-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
@@ -73,9 +76,9 @@ export default function Hero() {
               />
             </svg>
             <span>Ubicación</span>
-            <span className="text-red-300 text-xs font-normal tracking-normal normal-case">próximamente</span>
+            <span className="text-red-300 text-xs font-normal tracking-normal normal-case">ver en Maps</span>
           </span>
-        </span>
+        </a>
       </div>
 
       <div className="reveal reveal-6 w-full max-w-2xl px-2">

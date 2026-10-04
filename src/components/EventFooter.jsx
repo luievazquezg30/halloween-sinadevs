@@ -18,6 +18,8 @@ const DETAILS = [
     key: 'location',
     label: 'Ubicación',
     value: 'Próximamente',
+    address: 'Cerro de la Campana 121, Lomas de Mazatlán',
+    addressHref: 'https://maps.app.goo.gl/H6ZSthe2aFU6HrQe9',
     iconColor: 'text-blood-500',
     labelColor: 'text-red-400/80',
     icon: (
@@ -40,7 +42,7 @@ const DETAILS = [
   {
     key: 'tickets',
     label: 'Boletos',
-    value: 'Muy pronto',
+    value: 'Ya disponibles',
     iconColor: 'text-blood-500',
     labelColor: 'text-red-400/80',
     icon: (
@@ -78,6 +80,17 @@ export default function EventFooter() {
                   {detail.label}
                 </p>
                 <p className="text-[10px] sm:text-xs font-medium text-gray-200">{detail.value}</p>
+                {detail.address && (
+                  <a
+                    href={detail.addressHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Ver ubicación en Google Maps"
+                    className="mt-0.5 block text-[10px] sm:text-xs leading-snug text-gray-400 transition-colors hover:text-red-300"
+                  >
+                    {detail.address}
+                  </a>
+                )}
               </div>
             </div>
           ))}

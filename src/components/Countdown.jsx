@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
 
-// Objetivo: 31 de octubre del año en curso a las 21:00.
+// Objetivo: 31 de octubre del año en curso, 21:00 HRS hora de Mazatlán, Sinaloa
+// (America/Mazatlan, UTC-7 todo el año — Sinaloa no aplica horario de verano).
+// Anclado con offset fijo para que el conteo sea correcto desde cualquier país.
 // Si la fecha ya pasó, rueda al siguiente año.
 function getTargetTime() {
   const year = new Date().getFullYear()
-  let target = new Date(year, 9, 31, 21, 0, 0).getTime()
+  let target = Date.parse(`${year}-10-31T21:00:00-07:00`)
   if (Date.now() > target) {
-    target = new Date(year + 1, 9, 31, 21, 0, 0).getTime()
+    target = Date.parse(`${year + 1}-10-31T21:00:00-07:00`)
   }
   return target
 }
